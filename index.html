@@ -165,8 +165,8 @@ html, body{
 <body>
 
 <!-- ✅ VIDEO BACKGROUND -->
-<video autoplay muted loop playsinline webkit-playsinline class="video-bg">
-    <source src="/videos/bg.mp4" type="video/mp4">
+<video id="bgVideo" autoplay muted loop playsinline webkit-playsinline class="video-bg">
+    <source src="videos/12984404_1920_1080_100fps.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
@@ -223,5 +223,15 @@ html, body{
     </div>
 
 </div>
+
+<script>
+const v=document.getElementById("bgVideo");
+if(v){
+  v.play().catch(()=>{});
+  v.addEventListener("error",()=>{
+    console.error("Background video failed to load:", v.currentSrc);
+  });
+}
+</script>
 </body>
 </html>
