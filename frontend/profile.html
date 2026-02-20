@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Profile</h2>
+    <div class="top-nav">
+      <a class="btn secondary" href="dashboard.html">Dashboard</a>
+      <button id="aboutBtn" class="secondary">About Us</button>
+      <button id="helpBtn" class="secondary">Help</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <h3>User Info</h3>
+    <p>Name: <strong id="name"></strong></p>
+    <p>Email: <strong id="email"></strong></p>
+
+    <h3>Bank Details</h3>
+    <form id="bankForm">
+      <div class="grid-2">
+        <input id="account_holder" placeholder="Account Holder Name" />
+        <input id="bank_name" placeholder="Bank Name" />
+        <input id="branch_name" placeholder="Branch Name" />
+        <input id="account_number" placeholder="Account Number" />
+        <input id="ifsc_code" placeholder="IFSC Code" />
+        <input id="upi_id" placeholder="UPI ID" />
+      </div>
+      <button type="submit">Save / Update</button>
+      <p id="statusMsg"></p>
+    </form>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
